@@ -1,0 +1,207 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 10, 2014, 4:33:31 PM
+    Author     : thanh
+*/
+
+/*
+ * 1. reset css
+ * 2. jstr-form
+ * 3. Popup 
+ * 4. tab 
+ * 5. acordition
+ * 
+ */
+
+/* 1. reset css */
+*{
+    margin: 0;
+    padding: 0;    
+}
+body {
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    font-family: Lato, sans-serif;
+    text-align: center;
+}
+.container {
+    width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+.success {color: #669900;}
+.error {color: #ff4444;}
+.warning {color: #ffbb33;}
+
+/* 2. jstr-form */
+.jstr-form fieldset {
+    padding: 10px 15px;
+    text-align: left;
+}
+.jstr-form legend {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+.jstr-form p {
+    margin: 10px 0;
+    vertical-align: middle;
+    position: relative;
+}
+.jstr-form p label {
+    width: 30%;
+    display: inline-block;
+    font-weight: bold;
+}
+.jstr-form p input {
+    width: 40%;
+    display: inline-block;
+}
+.jstr-form p input[type="text"],
+.jstr-form p input[type="email"],
+.jstr-form p input[type="password"] {
+    padding: 3px 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.btn {
+    padding: 5px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn.btn-success {
+    width: auto;
+    background: #669900;
+    color: #fff;
+    border: none;
+}
+.btn.btn-default {
+    width: auto;
+    background: #ccc;
+    color: #333;
+}
+.jstr-form p input.error {
+    border: 1px solid red;
+}
+.jstr-form p span {
+    width: auto;
+    display: block;
+    clear: both;
+    margin-left: 33%;
+    background: none;
+    display: none;
+}
+/* 3. Popup */
+.modal {
+    display: none;
+    border: 1px solid #ccc;
+    position: absolute;
+    box-shadow:          
+        0px 0px 10px rgba(0,0,80,0.7),          
+        0px 0px 4px rgba(0,0,0,0.4), 3px 3px 6px rgba(0,0,0, 0.5),          
+        2px 2px 1px rgba(255,255,255,0.3) inset,          
+        10px 10px 20px rgba(0,0,0,0.1) inset;
+    background: #fff;
+    z-index: 9999;
+}
+.header-modal {
+    position: relative;
+    background: #ccc;
+}
+.header-modal .close {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-style: normal;
+    font-family: sans-serif;
+}
+.header-modal h1 {
+    padding: 5px 15px;
+}
+.content-modal {
+    padding: 10px 15px;
+    text-align: justify;
+}
+.footer-modal {
+    padding: 10px 15px;
+    background: #ccc;
+}
+.footer-modal a {
+    text-decoration: underline;
+    color: #000;
+}
+.cover-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(37, 37, 12, 0.46);
+    opacity: 1;
+    display: none;
+}
+/* 4. tab */
+.title-tab {
+    background: #ccc;
+    display: inline-block;  cursor: pointer;  
+    padding: 3px 15px;
+    border-radius: 5px 5px 0 0;
+}
+.title-tab.active {
+    background: #000;
+
+    color: #fff;
+}
+.body-tab {
+    border: 1px solid #ccc;
+}
+.content-tab {
+    display: block;
+    padding: 5px 10px;
+    display: none;
+    background: #fff;
+}
+.content-tab.active {
+    display: block;
+}
+/* acordition */
+.jstr-acordition {
+    margin-top: 20px;
+}
+.acordition {}
+.item-acd {
+    display: block;
+}
+.item-acd .header-acd {
+    padding: 3px 0px 3px 5px;
+    background: #ccc;
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+.item-acd .header-acd.active {
+    background: #000;
+    color: #fff;
+}
+.content-acd {    
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 5px 5px 10px;
+    display: none;
+}
+.content-acd.active {
+    display: block;
+}
