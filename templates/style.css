@@ -205,3 +205,12 @@ body {
 .content-acd.active {
     display: block;
 }
+.list-users {
+    text-align: left;
+}
+.list-users ul {}
+.list-users ul li {}
+.user-info {}
+.user-info h4 {}
+.user-info h4 a {}
+.user-info p {}

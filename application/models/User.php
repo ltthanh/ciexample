@@ -20,14 +20,30 @@ class User extends CI_Model {
     }
 
     public function listAll() {
-        $this->db->order_by('user_fullname');
-        $this->db->limit(1,0);
+        $this->db->order_by('user_id');
+        $this->db->limit(10,0);
         $query = $this->db->get('users');
         return $query->result_array();
     }
 
     public function addUser($data) {
         $this->db->insert('users', $data);
+    }
+    
+    public function editUser($data) {
+        $this->db->where('user_id', $data['user_id']);
+        $this->db->update('users', $data);
+    }
+    
+    public function getUserById($id = 0) {
+        $this->db->where('user_id', $id);        
+        $query = $this->db->get('users');
+        return $query->result_array();
+    }
+    
+    public function getAllUsers() {
+        $query = $this->db->get('users');
+        return $query->result_array();
     }
 
 }

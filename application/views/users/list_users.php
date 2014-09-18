@@ -1,13 +1,18 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-echo "Danh sach users ne!";
-echo "<br />";
-echo "<pre>";
-print_r($users);
-echo "</pre>";
+<div class="container">
+    <section class="list-users">
+        <h3>Danh sách người dùng</h3>
+        <ul>
+            <?php
+            $this->load->helper('url');
+            foreach ($users as $row) {
+                echo "<li>";
+                echo "<div class='user-info'>";
+                echo "<h4><a href=" . base_url() . "index.php/users/view/" . $row['user_id'] . ">" . $row['user_fullname'] . "</a></h4>";
+                echo "<p><strong>Email :</strong> " . $row['user_email'] . "</p>";
+                echo "<p><a href='#'>Edit</a></p>";
+                echo "</li>";
+            }
+            ?>            
+        </ul>
+    </section>
+</div>

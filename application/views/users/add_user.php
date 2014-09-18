@@ -22,7 +22,7 @@
                     <input type="password" name="passwordretype" placeholder="Retype your password"/>
                 </p>
                 <p>
-                    <input type="checkbox" name="status"> Agree</input>
+                    <input type="checkbox" name="status" checked="1"> Agree</input>
                 </p>
                 <p>
                     <input type="submit" class="btn btn-success" name="submit" value="Sign up"/>
