@@ -9,7 +9,7 @@
 /**
  * Description of users
  *
- * @author HOME
+ * @author thanh
  */
 class Users extends CI_Controller {
 
@@ -104,6 +104,13 @@ class Users extends CI_Controller {
         return $this->output
             ->set_content_type('application/json')
             ->set_output(json_encode($data));
+    }
+    
+    public function getDataPost() {
+        $data['fullname'] = $this->input->post('fullname');
+        $data['email'] = $this->input->post('email');
+        $this->load->View('users/show_post', $data);
+        return "OK";
     }
 
 }
