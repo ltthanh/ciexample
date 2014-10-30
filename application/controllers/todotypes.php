@@ -7,6 +7,7 @@ class todotypes extends CI_Controller {
 
     public function index() {
         $this->load->Model('TodoType');
+        $data['title'] = "Index TODOTYPE";
         $data['todotypes'] = $this->TodoType->listAll();
 
         $this->load->view('templates/header', $data);
@@ -29,6 +30,33 @@ class todotypes extends CI_Controller {
         $data = $this->TodoType->getAllTodoType();
         return $data;
     }
+
+    public function add_ajax() {
+
+    }
+
+    public function add() {
+        $data['title'] = "Add new todotype";
+        $type_name = $this->uri->segment(3);
+        if(!empty($type_name)) {
+            // if have a parameter 3
+            $todotype = array(
+                "id" => null,
+                "typename" => $type_name,
+                "lastupdated" => null
+                );
+            $this->load->Model('TodoType');
+            $this->TodoType->insert($todotype);
+            echo "Insert success";
+            return "1";
+        } else {
+            // dont have parameter 3
+            $this->load->view('templates/header', $data);
+            $this->load->view('todotypes/add', $data);
+            $this->load->view('templates/footer');
+        }
+        
+    }
 }
 
- ?>
+?>

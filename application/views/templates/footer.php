@@ -5,5 +5,6 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <?php $this->load->helper('url'); ?>
         <script src="<?php echo base_url();?>templates/js/jstraining.script.js"></script>
+        <script src="<?php echo base_url();?>js/app.js"></script>
 	</body>
 </html>

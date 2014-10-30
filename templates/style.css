@@ -214,3 +214,6 @@ body {
 .user-info h4 {}
 .user-info h4 a {}
 .user-info p {}
+.no-display {
+    display: none;
+}
