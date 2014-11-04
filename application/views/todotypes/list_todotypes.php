@@ -1,9 +1,13 @@
 <div class="container">
     <section class="list-users">
         <h3>Danh sách todotypes</h3>
+        <?php 
+        $this->load->helper('url');
+        echo '<h1><a href="'. base_url().'index.php/todotypes/add">ADD NEW TODOTYPE</a></h1>'
+         ?>
         <ul>
             <?php
-            $this->load->helper('url');
+            
             foreach ($todotypes as $row) {
                 echo "<li>";
                 echo "<div class='user-info'>";

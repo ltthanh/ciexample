@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>SPA</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="t-localStorage">
+            <div class="col-lg-12">
+                <h1>localStorage</h1>
+                <p><span class="label label-primary">Data status :</span> <span class="label label-danger" id="slStorage"></span></p>
+                <p>
+                    <label for="_key">KEY : </label>
+                    <input class="form-control" type="text" id="_key" placeholder="Enter your key">
+                </p>
+                <p>
+                    <label for="_value">Value : </label>
+                    <input class="form-control" type="text" id="_value" placeholder="Enter your value">
+                </p>
+                <p><button id="enData" class="btn btn-default">Enter</button></p>
+                <p>
+                    <button class="btn btn-default" id="getlStorage">Get localStorage</button>
+                    <button class="btn btn-danger" id="btnRmItems">Remove All Items</button>
+                    <button class="btn btn-primary disabled" id="btnRmItem" disable>Remove item with key</button>
+                    <input class="btn" type="text" id="rm_key" placeholder="Enter key for remove">
+                    <button class="btn btn-primary" id="btnGetDataLS" disable>GET</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

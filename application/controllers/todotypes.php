@@ -31,15 +31,18 @@ class todotypes extends CI_Controller {
         return $data;
     }
 
-    public function add_ajax() {
+    public function edit() {
 
     }
 
     public function add() {
         $data['title'] = "Add new todotype";
         $type_name = $this->uri->segment(3);
+        $type_name_dunk = $this->uri->segment(4);
+
         if(!empty($type_name)) {
             // if have a parameter 3
+            echo $type_name;
             $todotype = array(
                 "id" => null,
                 "typename" => $type_name,

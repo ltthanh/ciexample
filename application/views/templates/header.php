@@ -10,4 +10,4 @@
         <link href="<?php echo base_url(); ?>templates/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <h1>ありがと</h1>
+        <h1>## todolist management ##</h1>
