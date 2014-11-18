@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>ParseJSON</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.barcodeui.css" media="screen">
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="loading">Loading...</div>
+        <div class="row" id="images">
+            
+        </div>
+        <form action="" id="formSer" method="POST">
+            <div><input type="text" name="a" value="1" id="a"></div>
+            <div><input type="text" name="b" value="2" id="b"></div>
+            <div><input type="hidden" name="c" value="3" id="c"></div>
+            <div>
+                <textarea name="d" rows="8" cols="40">4</textarea>
+            </div>
+            <div><select name="e">
+                <option value="5" selected="selected">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select></div>
+            <div>
+                <input type="checkbox" name="f" value="8" id="f">
+            </div>
+            <div>
+                <input type="submit" name="g" value="Submit" id="g">
+            </div>
+        </form>
+        
+    </div>
+
+    <script src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script src="js/app.json.js"></script>
+</body>
+</html>

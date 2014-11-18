@@ -113,4 +113,24 @@ class Users extends CI_Controller {
         return "OK";
     }
 
+    public function getUser() {
+        if ($_SERVER['REQUEST_METHOD'] === "POST") {
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+
+            echo $username;
+            echo "<br>";
+            echo $password;
+
+        } else {
+            // Get 
+            $username = $this->input->get('username');
+            $password = $this->input->get('password');
+
+            echo $username;
+            echo "<br>";
+            echo $password;
+        }
+    }
+
 }

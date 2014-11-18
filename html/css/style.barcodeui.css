@@ -1,0 +1,36 @@
+/** style for barcode-ui **/
+.mobile-480 {
+    width: 480px;
+}
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+.footer-bar {}
+.footer-bar ul {border: 1px solid #ccc;}
+.footer-bar ul li {
+    width: 33%;
+    display: block;
+    float: left;
+}
+.footer-bar ul li.active {
+    background: #eee;
+}
+.footer-bar ul li a {
+    color: #0099FF;
+    font-size: 150%;
+}
+.btn-scan {
+    margin: 60px 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.logo-barcode {
+    margin: 60px 0 0 0;
+}
+.btn-scan.active {
+
+}

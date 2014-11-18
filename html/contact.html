@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.contact.css" media="screen">
+    <title>Contact Manager</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            
+                <ul class="nav nav-tabs" id="myTab">
+                    <li role="presentation"><a href="#Phone">Phone</a></li>
+                    <li role="presentation"><a href="#Favourite">Favourite</a></li>
+                    <li role="presentation" class="active"><a href="#Home">Contact</a></li>
+                </ul>
+            
+        </nav>
+        <div class="row body-content">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="Phone">
+                    Phone
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="Home">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Search</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
+                    <ul class="list-group" id="list-contact">
+                        <li class="label label-success">#</li>
+                        <li class="list-group-item">Item 1 <i class="pull-right glyphicon glyphicon-qrcode"></i></li>
+                        <li class="list-group-item">Item 6 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 3 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="label label-success">A</li>
+                        <li class="list-group-item">Item 12 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 7 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 3 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 9 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="label label-success">B</li>
+                        <li class="list-group-item">Item 1 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 2 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 3 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                        <li class="list-group-item">Item 4 <i class="pull-right glyphicon glyphicon-user"></i></li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="Favourite">
+                    Favourite
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.contact.js"></script>
+</body>
+</html>

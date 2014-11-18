@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<head>
+    <title>
+        Digit Signature
+    </title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div id="signature"></div>
+    <p>
+        <button id="btnClear">Clear sign</button>
+        <button id="btnGet">Get sign</button>
+    </p>
+    <div id="rsSign"></div>
+    <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/lib/jSignature/jSignature.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#signature').jSignature();
+
+        $('#btnClear').click(function(e) {
+            $('#signature').jSignature('reset');
+        });
+
+        $('#btnGet').click(function(e) {
+         var data = $('#signature').jSignature("getData", "svgbase64");
+         var i = new Image();
+         i.src = "data:" + data[0] + "," + data[1];
+         $('#rsSign').empty();
+         $(i).appendTo('#rsSign');
+
+         //console.log(data);
+
+         var data1 = $('#signature').jSignature("getData", "base30");
+         var j = new Image();
+         j.src = "data:" + data1[0] + "," + data1[1];
+         // $('#rsSign').empty();
+         //$(j).appendTo('#rsSign');
+
+         //console.log(data1);
+
+         var data2 = $('#signature').jSignature("getData", "svg");
+         console.log(data2);
+     });
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.cap.css" media="screen">
+    <title>Hello World</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <div class="text-center container header-bar">
+                <button id="back-home" class="btn btn-default absolute btn-back" data-rel="back">
+                    <i class="glyphicon glyphicon-home"></i> Home
+                </button>
+            </div>
+        </nav>
+        <!--/ menu header -->
+
+        <div class="row page active" id="home">
+            <h1 class="text-center mrgtop-60">Select a function</h1>
+            <div class="col-lg-12">
+                <p data-href="#cap-pic" class="font500 transpage text-center">
+                    <i class="glyphicon glyphicon-camera"></i>
+                </p>
+                <p class="trans-page text-center text-uppercase">
+                    Take a photo
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <p data-href="#cap-audio" class="font500 transpage text-center">
+                    <i class="glyphicon glyphicon-record"></i>
+                </p>
+                <p class="trans-page text-center text-uppercase">
+                    Record audio
+                </p>
+            </div>
+            <div class="col-lg-12 mrgbot-60">
+                <p data-href="#cap-video" class="font500 transpage text-center">
+                    <i class="glyphicon glyphicon-facetime-video"></i>
+                </p>
+                <p class="trans-page text-center text-uppercase">
+                    Record video
+                </p>
+            </div>
+        </div>
+        <div class="row page" id="cap-pic">
+            <div class="col-lg-12">
+                <h1>Capture picture / Get Picture</h1>
+                <p id="capPhoto" class="btn btn-default">Capture photo from camera</p>
+                <p id="getPhoto" class="btn btn-default">Get photo from Gallery</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar"
+                        aria-valuenow="0" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 0%;">
+                        0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="row page" id="cap-audio">
+            <div class="col-lg-12">
+                <h1>Capture audio</h1>
+            </div>
+        </div>
+        <div class="row page" id="cap-video">
+            <div class="col-lg-12">
+                <h1>Capture video</h1>
+            </div>
+        </div>
+
+        <footer class="navbar navbar-fixed-bottom">
+            <div class="footer-bar text-center">
+                <p>Copyright &copy 2014</p>
+            </div>
+
+        </footer><!--/ footer -->
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/app.cap.js"></script>
+</body>
+</html>

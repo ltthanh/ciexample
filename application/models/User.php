@@ -46,4 +46,11 @@ class User extends CI_Model {
         return $query->result_array();
     }
 
+    public function checkExistsUser($username, $password) {
+        $this->db->where('user_name', $username);
+        $this->db->where('user_password', $password);
+        $query = $this->db->get('users');
+        return $query->result_array();
+    }
+
 }

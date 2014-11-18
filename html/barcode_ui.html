@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <title>SPA</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.barcodeui.css" media="screen">
+</head>
+<body>
+    <div class="container-fluid mobile-480">
+
+        <div class="row page active" id="barcode-ui">
+            <div class="col-lg-12">
+                <h1 class="text-center">Scan barcode</h1>
+                <div class="text-center logo-barcode">
+                    <img class="media" src="images/qrcode_15gl.png" alt="QR_CODE_15Greenleaves">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success btn-scan" id="btn-scan">SCAN</button>
+                </div>
+                <div class="barcode-info">
+                    <h3>Barcode infomation</h3>
+                    <div><strong>Content :</strong> <span id="bc-content"></span></div>
+                    <div><strong>Format :</strong> <span id="bc-fm"></span></div>
+                    <div><strong>Status :</strong> <span id="bc-st"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row page" id="digital-sign">
+            <div class="col-lg-12">
+                <h1 class="text-center">Digital signature</h1>
+                <div id="signature"></div>
+                <div class="text-center">
+                    <button class="btn btn-default" id="btnClear">Clear sign</button>
+                    <button class="btn btn-default" id="btnGet">Get sign</button>
+                </div>
+                <div class="media" id="rsSign"></div>
+            </div>
+        </div>
+        <div class="row page" id="barcode-love">
+            <div class="col-lg-12">
+                <h1 class="text-center">Favourite barcode</h1>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="item-fv">
+                            <h3>Title</h3>
+                            <p>Type</p>
+                            <p>Status</p>
+                            <span class="label label-danger" data-id="" id="btn-rm-fv">Remove</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="item-fv">
+                            <h3>Title</h3>
+                            <p>Type</p>
+                            <p>Status</p>
+                            <span class="label label-danger" data-id="" id="btn-rm-fv">Remove</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="item-fv">
+                            <h3>Title</h3>
+                            <p>Type</p>
+                            <p>Status</p>
+                            <span class="label label-danger" data-id="" id="btn-rm-fv">Remove</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <button class="btn btn-danger btn-remove-all" id="btn-remove-all">EMPTY</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="navbar navbar-fixed-bottom">
+            <div class="footer-bar text-center">
+                <ul class="nav" role="tablist">
+                    <li class="active" data-pageid="barcode-ui">
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="glyphicon glyphicon-camera"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-pageid="digital-sign">
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="glyphicon glyphicon-cloud"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-pageid="barcode-love">
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="glyphicon glyphicon-heart"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </footer><!--/ footer -->
+    </div>
+
+    <script src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script src="js/app.barcode.js"></script>
+</body>
+</html>
