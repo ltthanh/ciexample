@@ -14,18 +14,38 @@
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top" role="navigation">
-            
-                <ul class="nav nav-tabs" id="myTab">
-                    <li role="presentation"><a href="#Phone">Phone</a></li>
-                    <li role="presentation"><a href="#Favourite">Favourite</a></li>
-                    <li role="presentation" class="active"><a href="#Home">Contact</a></li>
-                </ul>
-            
+            <ul class="nav nav-tabs" id="myTab">
+                <li role="presentation"><a href="#Phone">Phone</a></li>
+                <li role="presentation"><a href="#Favourite">Favourite</a></li>
+                <li role="presentation" class="active"><a href="#Home">Contact</a></li>
+            </ul>
         </nav>
         <div class="row body-content">
-            <div class="tab-content">
+            <div class="tab-content col-lg-12 col-md-12 col-sm-12">
                 <div role="tabpanel" class="tab-pane" id="Phone">
-                    Phone
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-home"></i></button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
+                    <div class="key-pad">
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">1</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">2</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">3</button>
+                        <button class="btn btn-success disabled col col-lg-3 col-sm-3 col-xs-3">Call</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">4</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">5</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">6</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">Clear</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">7</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">8</button>
+                        <button class="btn btn-default col col-lg-3 col-sm-3 col-xs-3">9</button>
+                        <button class="btn btn-danger col col-lg-3 col-sm-3 col-xs-3">End Call</button>
+                        <button class="btn btn-default col col-lg-12 col-sm-12 col-xs-12">0</button>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tab-pane active" id="Home">
                     <div class="form-group">
@@ -54,7 +74,42 @@
                     </ul>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="Favourite">
-                    Favourite
+                    <ul class="list-group" id="list-contact-fav">
+                        
+                        <li class="list-group-item">
+                            <div class="img-cont"><i class="pull-right glyphicon glyphicon-qrcode"></i></div>
+                            <div class="info-cont">
+                                <span class="hide" id="idContact">0</span>
+                                <p><strong>Name : </strong> John Parker</p>
+                                <p><strong>Phone : </strong> 126-6609-013</p>
+                                <p><strong>Email : </strong> john@gmail.com</p>
+                                <p><strong>Address : </strong> 135 Nguyen Van Linh <i class="glyphicon glyphicon-map-marker"></i></p>
+                                <p>
+                                    <span class="label label-success" data-action="act-edit">Edit</span>
+                                    <span class="label label-success" data-action="act-call">Call</span>
+                                    <span class="label label-warning" data-action="act-sms">SMS</span>
+                                    <span class="label label-danger" data-action="act-remove">Remove</span>
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <div class="img-cont"><i class="pull-right glyphicon glyphicon-user"></i></div>
+                            <div class="info-cont">
+                                <span class="hide" id="idContact">1</span>
+                                <p><strong>Name : </strong> Wiliam Cuong</p>
+                                <p><strong>Phone : </strong> 232-323-2323</p>
+                                <p><strong>Email : </strong> wiliam@gmail.com</p>
+                                <p><strong>Address : </strong> 13 Pham Van Nghi <i class="glyphicon glyphicon-map-marker"></i></p>
+                                <p>
+                                    <span class="label label-success" data-action="act-edit">Edit</span>
+                                    <span class="label label-success" data-action="act-call">Call</span>
+                                    <span class="label label-warning" data-action="act-sms">SMS</span>
+                                    <span class="label label-danger" data-action="act-remove">Remove</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
