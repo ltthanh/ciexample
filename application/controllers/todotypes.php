@@ -15,7 +15,7 @@ class todotypes extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function getAllTodoType() {
+    public function getAllTodoTypeJsonp() {
         $this->load->Model('TodoType');
         $data = $this->TodoType->getAllTodoType();
         header("Content-type: application/json");
@@ -25,10 +25,12 @@ class todotypes extends CI_Controller {
         echo 'json('.json_encode($data).')';
     }
 
-    public function getAllTodoTypeJsonp() {
+    public function getAllTodoType() {
         $this->load->Model('TodoType');
         $data = $this->TodoType->getAllTodoType();
-        return $data;
+        return $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($data));
     }
 
     public function edit() {

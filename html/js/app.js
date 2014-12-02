@@ -94,6 +94,63 @@
             console.log(typeof APP.getDataLocalStorage($j('#rm_key').val().trim()));
         });
 
+        // catch get html content
+        $j('.btn-gethtml').on('click', function(e) {
+            var $btn = $j(this).button('loading'),
+                $input_url = $j('#input_url'),
+                $val_url = $input_url.val(),
+                regURL = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)?/gi,
+                regex = new RegExp(regURL);
+            // get content html 
+            if ( $input_url.val() != "" ) {
+                // $j('#html-content').load("http://google.com");
+                $j('#html-content').text("");
+                $j.ajax({
+                    url: $val_url,
+                    type: 'GET',
+                    success: function(res) {
+                        console.log(res);
+                        for (var key in res) {
+                            console.log(res[key]);
+                        }
+                        // var headline = $(res.responseText).find('a.tsh').text();
+                        $j('#input_url').parent().removeClass('has-error');
+                        $j('#html-content').text(res.responseText);
+                        var $html = $j.parseHTML(res.responseText);
+                        console.log($html);
+                        // $j.map($html, function(val, i) {
+                        //     console.log(typeof(val));
+                        // });
+                        $btn.button('reset');
+                    },
+                    error: function(e) {
+                        // alert("Loi");
+                        // console.log(e);
+                        if( e.responseText ) {
+                            if( e.statusText == 'OK' ) {
+                                var $obj = e.responseText;
+                                $obj = $obj.replace('json(', '');
+                                $obj = $obj.replace(')', '');
+                                $obj = $j.parseJSON($obj);
+                                console.log($obj);
+                                var $temp;
+                                for (var key in $obj) {
+                                    $temp = "<p>" + $obj[key].typename + "</p>";
+                                    $j('#html-content').append($temp);
+                                }
+                                $btn.button('reset');    
+                            } else {
+                                console.error("Error!!!");
+                            }
+                        }
+                    }
+                });
+            } else {
+                $j('#input_url').parent().addClass('has-error');
+                $btn.button('reset');
+            }
+        });
+
     };
 
     /**

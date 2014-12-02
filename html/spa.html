@@ -29,10 +29,25 @@
                     <button class="btn btn-primary" id="btnGetDataLS" disable>GET</button>
                 </p>
             </div>
+            <!-- Get content from URL - Ajax Cross Domain -->
+            <div class="col-lg-12">
+                <h1>get Data from URL with Cross Domain by Ajax Processing</h1>
+                <p><label for="input_url">Enter your url</label>
+                    <input type="url" id="input_url" name="" value="" placeholder="" class="form-control">
+                </p>
+                <p>
+                    <button class="btn btn-success btn-gethtml" data-loading-text="Loading...">Get html content</button>
+                </p>
+                <div id="html-content" class="well">
+                    No data
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="js/lib/jquery/jquery-1.10.2.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="js/lib/jquery.xdomainajax.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
